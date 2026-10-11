@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .min-h-screen-dvh {
+    min-height: 100dvh;
+  }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+}
+
+/* Comico Font */
+@font-face {
+  font-family: 'Comico';
+  src: url('/fonts/Comico-Regular.woff2') format('woff2'),
+       url('/fonts/Comico-Regular.woff') format('woff'),
+       url('/fonts/Comico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Satoshi Font */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Font Variables */
+    --font-satoshi: 'Satoshi', sans-serif;
+    --font-comico: 'Comico', sans-serif;
+
+    /* Brand Colors */
+    --primary: #B8E62E;
+    --primary-dark: #9BC924;
+    --secondary: #FF6B35;
+    --accent-orange: #FF8C42;
+
+    /* Neutral Colors */
+    --background: #FAF8F3;
+    --foreground: #1A1A1A;
+    --cream: #F5F2E8;
+    --beige: #E8E3D6;
+
+    /* Functional Colors */
+    --success: #4CAF50;
+    --error: #EF4444;
+    --warning: #F59E0B;
+
+    /* Text Colors */
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-muted: #8A8A8A;
+
+    /* UI Colors */
+    --border: #E0E0E0;
+    --card-bg: #FFFFFF;
+    --overlay: rgba(0, 0, 0, 0.5);
+
+    /* Spacing */
+    --container-padding: 1.5rem;
+    --section-spacing: 5rem;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
